@@ -7,9 +7,9 @@ const inputCallback = val => (
 );
 
 const demo = () => (
-  <div>
+  <div style={{ margin: '50px' }}>
     <h1>Pagína de Demonstração dos componentes base!</h1>
-    <div style={{ margin: '20px' }}>
+    <div>
       <h2>Base input</h2>
       <BaseInput
         placeholder="Teste"
