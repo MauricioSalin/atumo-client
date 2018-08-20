@@ -1,0 +1,15 @@
+input {
+  outline: none;
+  font-size: 14px;
+  padding: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.2rem;
+  min-width: 300px;
+  min-height: 15px;
+  transition: all 0.30s ease-in-out;
+}
+
+input:focus {
+  border-color: rgb(138, 43, 226);
+  box-shadow: 0 0 5px rgba(84, 23, 141, 0.1);
+}
