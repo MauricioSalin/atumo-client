@@ -12,9 +12,9 @@ const buttonCallback = () => (
 );
 
 const demo = () => (
-  <div style={{ margin: '50px' }}>
+  <div className="general-content">
     <h1>Pagína de Demonstração dos componentes base!</h1>
-    <div>
+    <div className="input-content">
       <h2>Base input</h2>
       <BaseInput
         placeholder="Teste"
@@ -22,7 +22,7 @@ const demo = () => (
         type="text"
       />
     </div>
-    <div>
+    <div className="buttons-content">
       <h2>Base button</h2>
       <BaseButton
         name="Primary"
@@ -50,6 +50,31 @@ const demo = () => (
         click={buttonCallback}
       />
     </div>
+
+    <style jsx>{`
+      .general-content {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        overflow: hidden;
+        background-color: #fafafa;
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+
+      .input-content {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+      }
+
+      .buttons-content {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+      }
+    `}
+    </style>
   </div>
 );
 

@@ -23,5 +23,8 @@ module.exports = {
             1, { "extensions": [".js", ".jsx"] }
         ],
         "import/no-unresolved": 0,
+        "linebreak-style": 0,
+        "react/jsx-one-expression-per-line": 0,
+        "no-console": 0
     }
 };
