@@ -24,6 +24,7 @@
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
     "object-assign": "4.1.1",
+    "pm2": "^3.0.4",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
     "promise": "8.0.1",
@@ -44,6 +45,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js lint",
+    "deploy": "sudo pm2 start client",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "lint": "./node_modules/.bin/eslint src/*.js --fix"

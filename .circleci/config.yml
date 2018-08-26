@@ -1,23 +1,16 @@
 version: 2
 jobs:
-  build:
+  "app":
+    working_directory: ~/apps/atumo-client
     docker:
-      # specify the version you desire here
       - image: circleci/node:7.10
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-    working_directory: ~/apps/atumo-client
-
     steps:
       - checkout
-
-      # 2. Log the current branch
-      - run:
-          name: Show current branch
-          command: git checkout master
 
       # Download and cache dependencies
       - restore_cache:
@@ -42,4 +35,11 @@ jobs:
 
       - deploy:
           name: Making deploy
-          command: "cd ~/apps/atumo-client; git config --global user.email "diegonogueira.santos@gmail.com"; git config --global user.name "Diego Santos" ;git pull origin master; npm install; pm2 restart 0;"
+          command: |
+            chmod 777 ./scripts/start-app.sh
+            ./scripts/start-app.sh
+workflows:
+  version: 2
+  build:
+    jobs:
+      - "app"
