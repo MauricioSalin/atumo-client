@@ -10,6 +10,7 @@ jobs:
 
       # 1. Checkout the code from the branch into the working_directory
       - checkout
+      - run: ssh-keyscan root@142.93.54.182 >> ~/.ssh/known_hosts
 
       # 2. Log the current branch
       - run:
