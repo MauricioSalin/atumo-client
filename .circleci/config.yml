@@ -36,4 +36,4 @@ jobs:
 
       - deploy:
           name: Deploy
-          command: "git pull origin master;"
+          command: "git config --global user.email "diegonogueira.santos@gmail.com"; git config --global user.name "Diego Santos"; git pull origin master;"
