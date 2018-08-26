@@ -32,7 +32,3 @@ jobs:
       - run:
           name: run tests
           command: npm run test
-
-      - deploy:
-          name: Making deploy
-          command: "sudo pm2 start atumo_client"
