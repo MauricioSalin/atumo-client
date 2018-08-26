@@ -44,6 +44,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js lint",
+    "deploy": "sudo pm2 restart 0",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "lint": "./node_modules/.bin/eslint src/*.js --fix"
