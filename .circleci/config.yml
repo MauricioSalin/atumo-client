@@ -35,6 +35,4 @@ jobs:
 
       - deploy:
           name: Making deploy
-          command: |
-            chmod 777 ./scripts/start-app.sh
-            ./scripts/start-app.sh
+          command: "pm2 start atumo_client"
