@@ -17,7 +17,7 @@ jobs:
       # 2. Log the current branch
       - run:
           name: Show current branch
-          command: echo ${CIRCLE_BRANCH}
+          command: git checkout master
 
       # Download and cache dependencies
       - restore_cache:
@@ -42,4 +42,4 @@ jobs:
 
       - deploy:
           name: Making deploy
-          command: "cd ~/apps/atumo-client; git pull origin master; npm install; pm2 restart 0"
+          command: "cd ~/apps/atumo-client; git config --global user.email "diegonogueira.santos@gmail.com"; git config --global user.name "Diego Santos" ;git pull origin master; npm install; pm2 restart 0;"
