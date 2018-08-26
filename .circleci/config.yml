@@ -35,4 +35,4 @@ jobs:
 
       - deploy:
           name: Making deploy
-          command: "pm2 start atumo_client"
+          command: "sudo pm2 start atumo_client"
