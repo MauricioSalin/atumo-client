@@ -34,6 +34,11 @@ button:disabled {
   color: white;
 }
 
+.btn-success {
+  background-color: rgb(32, 172, 67);
+  color: white;
+}
+
 .btn-warning {
   background-color: rgb(226, 223, 43);
   color: white;
