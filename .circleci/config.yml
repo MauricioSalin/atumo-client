@@ -37,9 +37,9 @@ jobs:
 
       # run tests!
       - run:
-        name: run tests
-        command: npm run test
+          name: run tests
+          command: npm run test
 
       - deploy:
-        name: Making deploy
-        command: "cd ~/apps/atumo-client; git pull origin master; npm install; pm2 restart 0"
+          name: Making deploy
+          command: "cd ~/apps/atumo-client; git pull origin master; npm install; pm2 restart 0"
