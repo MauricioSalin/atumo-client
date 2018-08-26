@@ -34,5 +34,4 @@ jobs:
           command: npm run test
 
       - deploy:
-          name: Deploy Digital Ocean
           command: "command: ssh -o "StrictHostKeyChecking no" root@142.93.54.182 "cd ~/apps/atumo-client; git pull; npm install;"
