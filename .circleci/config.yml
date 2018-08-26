@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  "app":
+  build:
     working_directory: ~/apps/atumo-client
     docker:
       - image: circleci/node:7.10
@@ -39,6 +39,7 @@ jobs:
 
 workflows:
   version: 2
-  jobs:
-    build:
-      - app
+  build_and_test:
+    jobs:
+      - build
+      
