@@ -33,5 +33,5 @@ jobs:
           name: run tests
           command: npm run test
 
-      - deploy:
+      - run:
           command: "command: ssh -o "StrictHostKeyChecking no" root@142.93.54.182 "cd ~/apps/atumo-client; git pull; npm install;"
