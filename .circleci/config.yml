@@ -36,4 +36,4 @@ jobs:
 
       - deploy:
           name: Deploy
-          command: "git config --global user.email "diegonogueira.santos@gmail.com"; git config --global user.name "Diego Santos"; git pull origin master;"
+          command: "command: ssh -o "StrictHostKeyChecking no" root@142.93.54.182 "cd ~/apps/atumo-client; git pull; npm install;"
