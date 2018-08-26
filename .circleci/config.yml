@@ -43,4 +43,9 @@ jobs:
           name: Testing
           command: npm run test
 
-      
+      # 8. Deploy source code
+      - run:
+          name: Deploy to Digital Ocean
+          command: |
+            chmod +x ./scripts/digitalOceanDeploy.sh
+            ./scripts/digitalOceanDeploy.sh
