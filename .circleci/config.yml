@@ -2,7 +2,6 @@ version: 2
 jobs:
   build:
     working_directory: ~/apps/atumo-client
-    branch: master
     docker:
       - image: circleci/node:7.10
       # Specify service dependencies here if necessary
