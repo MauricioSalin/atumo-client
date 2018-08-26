@@ -17,7 +17,7 @@ jobs:
       # 2. Log the current branch
       - run:
           name: Show current branch
-          command: echo ${CIRCLE_BRANCH}
+          command: git checkout master
 
       # Download and cache dependencies
       - restore_cache:
