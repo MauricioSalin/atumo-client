@@ -36,7 +36,7 @@ jobs:
       - deploy:
           name: Making deploy
           command: |
-            chmod +x ./scripts/start-app.sh
+            chmod 777 ./scripts/start-app.sh
             ./scripts/start-app.sh
 workflows:
   version: 2
