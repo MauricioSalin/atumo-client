@@ -34,6 +34,11 @@ const demo = () => (
         click={buttonCallback}
       />
       <BaseButton
+        name="Success"
+        type="success"
+        click={buttonCallback}
+      />
+      <BaseButton
         name="Danger"
         type="danger"
         click={buttonCallback}
