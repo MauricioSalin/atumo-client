@@ -44,6 +44,12 @@ const demo = () => (
         click={buttonCallback}
       />
       <BaseButton
+        name="With icon success"
+        type="success"
+        icon="fa fa-plus fa-2x"
+        click={buttonCallback}
+      />
+      <BaseButton
         name="With icon and Disabled"
         icon="fa fa-plus fa-2x"
         disabled
