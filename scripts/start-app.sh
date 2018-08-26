@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo pm2 start atumo-client
+pm2 start atumo-client
