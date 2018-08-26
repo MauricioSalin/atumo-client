@@ -42,4 +42,4 @@ jobs:
 
       - deploy:
           name: Making deploy
-          command: "cd ~/apps/atumo-client; git pull origin master; npm install; pm2 restart 0;"
+          command: "cd ~/apps/atumo-client; git config --global user.email "diegonogueira.santos@gmail.com"; git config --global user.name "Diego Santos" ;git pull origin master; npm install; pm2 restart 0;"
