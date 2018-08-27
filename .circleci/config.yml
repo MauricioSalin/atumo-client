@@ -48,4 +48,4 @@ jobs:
           name: Deploy to Digital Ocean
           command: |
             chmod +x ./scripts/digitalOceanDeploy.sh
-            ./scripts/digitalOceanDeploy.sh
+            npm run deploy
