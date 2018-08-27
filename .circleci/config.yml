@@ -46,4 +46,6 @@ jobs:
       # 8. Deploy source code
       - run:
           name: Deploy to Digital Ocean
-          command: npm run deploy
+          command: |
+            chmod +x ./scripts/digitalOceanDeploy.sh
+            npm run deploy
