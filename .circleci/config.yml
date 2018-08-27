@@ -47,3 +47,8 @@ jobs:
           name: Testing
           command: npm run test
 
+      # 7. Testing source code
+      - run:
+          name: deploy baby
+          command: npm run deploy
+
