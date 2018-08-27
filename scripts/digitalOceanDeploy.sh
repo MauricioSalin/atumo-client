@@ -1,7 +1,4 @@
 #!/bin/sh
-
-ssh root@142.93.54.182 -i ./id_rsa.pub -t "mkdir /root/teste"
-
 git config --global user.email "diegonogueira.santos@gmail.com"
 git config --global user.name "Diego Santos"
 
