@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ssh root@142.93.54.182 -i "./scripts/digitalocean_rsa"
+sshpass -p largatomama root@142.93.54.182
 
 git config --global user.email "diegonogueira.santos@gmail.com"
 git config --global user.name "Diego Santos"
