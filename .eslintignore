@@ -1,3 +1,4 @@
 **/*.test.js
+scripts
 src/registerServiceWorker.js
 src/index.js
