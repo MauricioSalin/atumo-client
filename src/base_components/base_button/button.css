@@ -12,6 +12,7 @@ button:disabled {
   min-width: 300px;
   min-height: 45px;
   max-height: 45px;
+  width: 100%;
   background-color: transparent;
   outline: none;
   border: none;
