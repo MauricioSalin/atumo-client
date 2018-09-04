@@ -1,15 +1,25 @@
-input {
+input[type="text"], input[type="password"] {
   outline: none;
-  font-size: 14px;
-  padding: 15px;
+  font-size: 18px;
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 0.2rem;
-  min-height: 15px;
+  min-width: 296.41px;
+  max-width: 296.41px;
+  min-height: 39.68px;
+  max-height: 39.68px;
+  padding-left: 15px;
   width: 100%;
   transition: all 0.30s ease-in-out;
 }
 
-input:focus {
+input[type="text"]:focus, input[type="password"]:focus {
   border-color: rgb(138, 43, 226);
   box-shadow: 0 0 5px rgba(84, 23, 141, 0.1);
+}
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  vertical-align: middle;
 }

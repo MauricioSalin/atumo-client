@@ -18,12 +18,14 @@ export default class BaseCard extends Component {
           <style jsx="true">{`
             .card-header {
               width: 100%;
-              height: 60px;
+              height: 92px;
               background-color: rgb(138, 43, 226);
               color: white;
               display: flex;
               justify-content: center;
               align-items: center;
+              font-style: italic;
+              font-size: 32px;
             }
           `}
           </style>
@@ -40,9 +42,11 @@ export default class BaseCard extends Component {
         {innerComponent}
         <style jsx="true">{`
           .card-body {
+            display: flex;
+            justify-content: center;
             width: 100%;
-            min-height: 400px;
             background-color: #f5f5f569;
+            padding: 30px 0;
           }
         `}
         </style>
@@ -59,10 +63,8 @@ export default class BaseCard extends Component {
 
         <style jsx="true">{`
           .card {
-            min-width: 400px;
-            min-height: 400px;
-            max-width: 400px;
-            max-height: 600px;
+            min-width: 418px;
+            max-width: 418px;
           }
         `}
         </style>

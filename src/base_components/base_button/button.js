@@ -10,6 +10,8 @@ const validateTypeButton = (type) => {
       return 'btn btn-danger';
     case 'success':
       return 'btn btn-success';
+    case 'transparent':
+      return 'btn btn-transparent';
     default:
       return 'btn btn-primary';
   }

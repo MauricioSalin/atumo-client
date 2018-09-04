@@ -4,19 +4,19 @@ import './input.css';
 
 const input = ({
   type,
-  onTextChange,
+  onChange,
   placeholder,
 }) => (
   <input
     placeholder={placeholder}
-    onChange={e => onTextChange(e.target.value)}
+    onChange={e => onChange && onChange(e.target.value)}
     type={type}
   />
 );
 
 input.propTypes = {
   type: PropTypes.string.isRequired,
-  onTextChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string.isRequired,
 };
 

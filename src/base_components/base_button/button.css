@@ -9,9 +9,8 @@ button:disabled {
   justify-content: center;
   border-radius: 0.2rem;
   font-size: 14px;
-  min-width: 300px;
-  min-height: 45px;
-  max-height: 45px;
+  min-height: 45.68px;
+  max-height: 45.68px;
   width: 100%;
   background-color: transparent;
   outline: none;
@@ -48,6 +47,13 @@ button:disabled {
 .btn-danger {
   background-color: rgb(226, 31, 31);
   color: white;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  color: black;
+  box-shadow: none;
+  border: solid .5px;
 }
 
 .icon {

@@ -14,6 +14,7 @@ export default class Login extends Component {
     this.state = {
       user: '',
       pwd: '',
+      remindMe: false,
     };
 
     this.makeLogin = this.makeLogin.bind(this);
@@ -26,17 +27,25 @@ export default class Login extends Component {
   }
 
   inputsComponent() {
+    const { remindMe } = this.state;
+
     return (
-      <div>
+      <div className="input-content">
+        <span className="input-title">Ou faça login com um e-mail</span>
         <div className="row">
-          <BaseInput type="text" placeholder="Usuário" onTextChange={value => this.setState({ user: value })} />
+          <BaseInput type="text" placeholder="Seu e-mail" onChange={value => this.setState({ user: value })} />
         </div>
         <div className="row">
-          <BaseInput type="password" placeholder="Senha" onTextChange={value => this.setState({ pwd: value })} />
+          <BaseInput type="password" placeholder="Senha" onChange={value => this.setState({ pwd: value })} />
+        </div>
+        <div className="remind-content">
+          <BaseInput type="checkbox" value={remindMe} onChange={() => this.setState({ remindMe: !remindMe })} /> Lembre-me
         </div>
         <div className="action">
-          <BaseButton type="primary" name="Login" click={() => { this.makeLogin(); }} />
+          <BaseButton type="primary" name="Fazer Login" click={() => { this.makeLogin(); }} />
         </div>
+        <div className="divider"></div>
+        <a href="/">Esqueceu sua senha?</a>
       </div>
     );
   }
@@ -44,53 +53,87 @@ export default class Login extends Component {
   render() {
     return (
       <div className="container">
-        <div className="menu">
+        <div className="navbar">
+
           <div className="brand">
             <img src={AtumoImage} alt="" />
           </div>
           <div className="register">
-            <a href="http://www.atumo.com.br">Inscreva-se</a>
+            <BaseButton type="transparent" name="Inscreva-se" click={() => { window.open('http://www.atumo.com.br'); }} />
           </div>
         </div>
+
         <div className="wrapper">
           <div className="center-column">
-            <BaseCard headerName="Login" innerComponent={this.inputsComponent()} />
+            <BaseCard headerName="Fazer login" innerComponent={this.inputsComponent()} />
           </div>
         </div>
         <style jsx="true"> {`
-          .row {
-            padding: 15px 60px 0 25px;
+          .input-content {
+            min-width: 315.41px;
+            max-width: 315.41px;
+            text-align: center;
           }
-          .action {
-            padding: 15px 30px 0 25px;
-          }
-          a {
-            font-size: 15px;
-            color: rgb(138, 43, 226);
+
+          .input-content a {
+            font-size: 18px;
+            color: #616161;
             text-decoration: none;
           }
+
+          .input-title {
+            font-size: 18px;
+            color: rgb(138, 43, 226);
+            font-style: italic;
+          }
+
+          .row {
+            width: 100%;
+            margin: 25px 0;
+          }
+
+          .remind-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            color: rgb(138, 43, 226);
+            font-weight: 500;
+            margin: 25px 0;
+          }
+
+          .action {
+            width: 100%;
+          }
+          
           .center-column {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100%;
           }
-          .menu {
+
+          .navbar {
             display:flex;
-            height:50px;
+            height:80px;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
+            padding: 0 365px;
           }
+
           .brand {
+            max-width: 133px;
+            max-height: 29px;
             display:flex;
-            flex: 2;
             justify-content: center;
           }
+
           .register {
             display:flex;
-            flex: 2;
             justify-content: center;
+            max-width: 112.72px;
+            min-width: 112.72px;
           }
+
           .wrapper {
             position: absolute;
             left:0;
@@ -98,6 +141,12 @@ export default class Login extends Component {
             height:100%;
             background-size: cover;
             background-image: url(${BackgroundImage})
+          }
+
+          .divider {
+            border: solid .5px;
+            border-color: rgb(138, 43, 226);
+            margin: 30px 0;
           }
         `}
         </style>
